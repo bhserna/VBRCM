@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.lyric__chord {
+  position: relative;
+  bottom: 1em;
+  color: blue;
+  width: 0;
+  display: inline-block;
+}
+
+.lyric__block--with-chords {
+  line-height: 2.5;
+}
