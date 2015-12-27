@@ -1,19 +1,20 @@
 window.Lyrics =
+  render: (text, opts = {chords: true}) ->
+    return "" unless text
+    @renderChords @renderBlocks(text, opts), opts
+
+  renderBlocks: (text, opts) ->
+    (for block in @blocksIn(text)
+      @wrapBlock(@blockWithLineBreaks(block), opts)).join ""
+
   chordRegexp: ///
     (\[)      # first bracket
     ([\w|#]*) # chord
     (\])      # closing bracket
     ///g
 
-  render: (text) ->
-    if text
-      @withChords(
-        (for block in @blocksIn(text)
-          @wrapBlock @blockWithLineBreaks(block)).join "")
-    else ""
-
-  wrapBlock: (block) ->
-    if block.match(@chordRegexp)
+  wrapBlock: (block, opts) ->
+    if opts.chords and block.match(@chordRegexp)
       "<p class='lyric__block--with-chords'>#{block}</p>"
     else
       "<p>#{block}</p>"
@@ -28,11 +29,14 @@ window.Lyrics =
   addBreak: (line, index, linesCount) ->
     if index + 1 is linesCount then line else "#{line}<br/>"
 
-  withChords: (block) ->
-    block.replace @chordRegexp, "<span class='lyric__chord'>$2</span>"
+  renderChords: (block, opts) ->
+    replacer = if opts.chords then @replaceChord else ""
+    block.replace @chordRegexp, replacer
 
+  replaceChord: (match, _openBracket, chord, _closingBracked, offset, _string) ->
+    "<span class='lyric__chord'>#{chord}</span>"
 
 $ ->
   $(".js-lyric").each ->
     $el = $ this
-    $el.html Lyrics.render $el.text()
+    $el.html Lyrics.render $el.text(), chords: false

@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+.l-main, .l-navbar {
+  @include outer-container;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.navbar {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 1em;
+
+  > h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.lyric__title {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.lyric__chord {
+  position: relative;
+  bottom: 1em;
+  color: blue;
+  width: 0;
+  display: inline-block;
+}
+
+.lyric__block--with-chords {
+  line-height: 2.5;
+}

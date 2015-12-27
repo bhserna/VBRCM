@@ -47,12 +47,21 @@ end
 #     "Helping"
 #   end
 # end
+#
 
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+activate :directory_indexes
+
+activate :blog do |blog|
+  blog.prefix = "letras"
+  blog.permalink = "{title}"
+  blog.layout = "lyrics"
+end
 
 # Build-specific configuration
 configure :build do
