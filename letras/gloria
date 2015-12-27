@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Gloria</title>
+
+    <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body class="letras letras_gloria">
+    <div class="l-navbar navbar">
+      <h1>Coro VBRCM</h1>
+    </div>
+
+    <div class="l-main">
+      <h1 class="lyric__title">Gloria</h1>
+
+      <div class="js-lyric">
+        <p>[Mim]Gloria, [Sol]gloria [Si7]a Dios en el c[Mim]ielo
+[Re]Y en la [Do]tierra [Si7]a los hombres [Mim]paz (BIS)</p>
+
+<p>Te alabamos y te bende[Re]cimos
+Te ado[Do]ramos y glorifi[Si7]camos
+Y no[Mim]sotros hoy te damos [Re]gracias
+Por Tu [Do]Grande y eterna [Si7]gloria</p>
+
+<p>[Mim]Gloria, [Sol]gloria [Si7]a Dios en el c[Mim]ielo
+[Re]Y en la [Do]tierra [Si7]a los hombres [Mim]paz (BIS)</p>
+
+<p>Señor, Dios, nuestro P[Do]adre, P[Mim]adre, [Do]Padre</p>
+
+<p>Se[Lam]ñor Dios [Mim]hijo,
+Pie[Si7]dad, pie[Mim]dad, pie[Si7]dad  Se[Mim]ñor [Mi7]</p>
+
+<p>Tu que [Re]quitas el pecado del [Sol]mundo
+Es[Si7]cucha[Mim]nos, es[Si7]cucha[Mim]nos [Mi7]</p>
+
+<p>Tu que [Re]estas a la derecha del [Sol]Padre,
+Pie[Si7]dad, pie[Mim]dad, pie[Si7]dad  Se[Mim]ñor [Mi7]</p>
+
+<p>[Mim]Solo tu eres santo, [Si7]solo Tu [Mim]Señor
+[Re]Solo Tu al[Do]tisimo [Si7]Jesu[Mim]cristo</p>
+
+<p>Con el santo espiritu</p>
+
+<p>En la gl[Si7]oria de Dios [Mim]Padre
+[Re]Amen, [Do]amen, [Si7]amen[Mim].</p>
+
+      </div>
+    </div>
+  </body>
+</html>
