@@ -55,11 +55,9 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-activate :directory_indexes
-
 activate :blog do |blog|
   blog.prefix = "letras"
-  blog.permalink = "{title}"
+  blog.permalink = "{title}.html"
   blog.layout = "lyrics"
 end
 
