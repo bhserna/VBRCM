@@ -17,6 +17,7 @@ gem "nokogiri"
 gem "middleman-jasmine"
 gem "middleman-jquery"
 gem "middleman-blog"
+gem 'middleman-deploy', '~> 0.3.0'
 
 gem 'bitters'
 gem 'bourbon'
