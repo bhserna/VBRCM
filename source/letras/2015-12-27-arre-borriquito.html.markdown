@@ -4,26 +4,16 @@ date: 2015-12-27 22:06 UTC
 tags:
 ---
 
-En la puerta de mi casa
-voy a poner un petardo,
-"pa" reírme del que venga,
-a pedir el aguinaldo.
-
-Pues si voy a dar a todo,
-el que pide en noche buena,
-yo si que voy a tener,
-que pedir de puerta en puerta.
-
 Arre borriquito, arre burro arre,
 anda más deprisa que llegamos tarde.
 Arre borriquito vamos a Belén,
 que mañana es fiesta
 y al otro también.
 
-Que el que quiera comer pan
-que no venga a mi cena
-en el portal de Belén
-la Virgen es panadera
+En la puerta de mi casa
+voy a poner un petardo,
+"pa" reírme del que venga,
+a pedir el aguinaldo.
 
 Pues si voy a dar a todo,
 el que pide en noche buena,
@@ -52,3 +42,18 @@ Arre borriquito vamos a Belén,
 que mañana es fiesta
 y al otro también.
 
+Hacia el portal de Belén
+Se dirige un pastorcillo,
+cantando de esta manera
+para alegrar el camino.
+
+Ha nacido el Niño Dios
+en un portal miserable
+para enseñar a los hombres
+la mitad de su linaje.
+
+Arre borriquito, arre burro arre,
+anda más deprisa que llegamos tarde.
+Arre borriquito vamos a Belén,
+que mañana es fiesta
+y al otro también.
