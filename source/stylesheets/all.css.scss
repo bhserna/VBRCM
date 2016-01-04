@@ -7,6 +7,9 @@
 .l-main, .l-navbar {
   @include outer-container;
   max-width: 500px;
+}
+
+.l-main--with-pad, .l-navbar {
   padding: 10px;
 }
 
@@ -23,13 +26,16 @@
 }
 
 .navbar {
-  border-bottom: 1px solid #eeeeee;
-  margin-bottom: 1em;
+  border-bottom: $base-border;
 
   > h1 {
     margin: 0;
     text-align: center;
   }
+}
+
+.navbar--for-lyric {
+  margin-bottom: 1em;
 }
 
 .lyric__title {
@@ -51,4 +57,15 @@
 
 .lyric__controls {
   padding-top: 1em;
+}
+
+.lyrics-list {
+  > li {
+    border-bottom: $base-border;
+  }
+
+  > li > a {
+    display: block;
+    padding: 10px;
+  }
 }
