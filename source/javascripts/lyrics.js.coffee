@@ -1,7 +1,10 @@
 window.Lyrics =
-  render: (text, opts = {chords: true}) ->
+  renderHtml: (text = "", opts = {chords: true}) ->
     return "" unless text
     @renderChords @renderBlocks(text, opts), opts
+
+  hasChords: (text = "") ->
+    !!(text.match @chordRegexp)
 
   renderBlocks: (text, opts) ->
     (for block in @blocksIn(text)
@@ -36,7 +39,36 @@ window.Lyrics =
   replaceChord: (match, _openBracket, chord, _closingBracked, offset, _string) ->
     "<span class='lyric__chord'>#{chord}</span>"
 
+window.App =
+  init: (@$el, @$controls, @source = @$el.text()) ->
+
+  render: (opts) ->
+    @$el.html Lyrics.renderHtml(@source, opts)
+
+    if Lyrics.hasChords(@source)
+      @$controls.removeClass("is-hidden")
+
+      if opts.chords
+        @showControl "hide-chords"
+        @hideControl "show-chords"
+
+      else
+        @showControl "show-chords"
+        @hideControl "hide-chords"
+
+  showControl: (control) ->
+    @$controls.find("[data-action='#{control}']").removeClass("is-hidden")
+
+  hideControl: (control) ->
+    @$controls.find("[data-action='#{control}']").addClass("is-hidden")
+
+  onAction: (name, fun) ->
+    $(document).on "click", ".js-lyric-controls [data-action='#{name}']", fun
+
+App.onAction "show-chords", -> App.render chords: true
+App.onAction "hide-chords", -> App.render chords: false
+
 $ ->
   $(".js-lyric").each ->
-    $el = $ this
-    $el.html Lyrics.render $el.text(), chords: false
+    App.init $(this), $(".js-lyric-controls")
+    App.render chords: false

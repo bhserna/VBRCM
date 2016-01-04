@@ -1,3 +1,6 @@
+render = Lyrics.renderHtml.bind(Lyrics)
+hasChords = Lyrics.hasChords.bind(Lyrics)
+
 describe "Render lyric", ->
   it "starts with nothing", ->
     html = render()
@@ -35,5 +38,10 @@ describe "Render lyric", ->
     html = render("[G#]La cucaracha\n\n[F#]Había un sapo", chords: false)
     expect(html).toEqual "<p>La cucaracha</p><p>Había un sapo</p>"
 
-  render = (text, opts) ->
-    Lyrics.render(text, opts)
+  it "knows when the lyric has chords", ->
+    source = "[G#]La cucaracha\n\n[F#]Había un sapo"
+    expect(hasChords(source)).toBeTruthy()
+
+  it "knows when the lyric has no chords", ->
+    source = "La cucaracha\n\nHabía un sapo"
+    expect(hasChords(source)).not.toBeTruthy()

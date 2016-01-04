@@ -10,6 +10,18 @@
   padding: 10px;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .navbar {
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 1em;
@@ -35,4 +47,8 @@
 
 .lyric__block--with-chords {
   line-height: 2.5;
+}
+
+.lyric__controls {
+  padding-top: 1em;
 }
