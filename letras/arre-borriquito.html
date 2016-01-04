@@ -15,12 +15,17 @@
   </head>
 
   <body class="letras letras_arre-borriquito">
-    <div class="l-navbar navbar">
+    <div class="l-navbar navbar navbar--for-lyric">
       <h1>Coro VBRCM</h1>
     </div>
 
-    <div class="l-main">
+    <div class="l-main l-main--with-pad">
       <h1 class="lyric__title">Arre borriquito</h1>
+
+      <div class="js-lyric-controls lyric__controls is-hidden">
+        <button data-action="show-chords" class="is-hidden">Mostrar acordes</button>
+        <button data-action="hide-chords" class="is-hidden">Ocultar acordes</button>
+      </div>
 
       <div class="js-lyric">
         <p>Arre borriquito, arre burro arre,

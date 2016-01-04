@@ -1,6 +1,9 @@
 (function() {
   window.Lyrics = {
-    render: function(text, opts) {
+    renderHtml: function(text, opts) {
+      if (text == null) {
+        text = "";
+      }
       if (opts == null) {
         opts = {
           chords: true
@@ -10,6 +13,12 @@
         return "";
       }
       return this.renderChords(this.renderBlocks(text, opts), opts);
+    },
+    hasChords: function(text) {
+      if (text == null) {
+        text = "";
+      }
+      return !!(text.match(this.chordRegexp));
     },
     renderBlocks: function(text, opts) {
       var block;
@@ -65,13 +74,54 @@
     }
   };
 
+  window.App = {
+    init: function($el, $controls, source) {
+      this.$el = $el;
+      this.$controls = $controls;
+      this.source = source != null ? source : this.$el.text();
+    },
+    render: function(opts) {
+      this.$el.html(Lyrics.renderHtml(this.source, opts));
+      if (Lyrics.hasChords(this.source)) {
+        this.$controls.removeClass("is-hidden");
+        if (opts.chords) {
+          this.showControl("hide-chords");
+          return this.hideControl("show-chords");
+        } else {
+          this.showControl("show-chords");
+          return this.hideControl("hide-chords");
+        }
+      }
+    },
+    showControl: function(control) {
+      return this.$controls.find("[data-action='" + control + "']").removeClass("is-hidden");
+    },
+    hideControl: function(control) {
+      return this.$controls.find("[data-action='" + control + "']").addClass("is-hidden");
+    },
+    onAction: function(name, fun) {
+      return $(document).on("click", ".js-lyric-controls [data-action='" + name + "']", fun);
+    }
+  };
+
+  App.onAction("show-chords", function() {
+    return App.render({
+      chords: true
+    });
+  });
+
+  App.onAction("hide-chords", function() {
+    return App.render({
+      chords: false
+    });
+  });
+
   $(function() {
     return $(".js-lyric").each(function() {
-      var $el;
-      $el = $(this);
-      return $el.html(Lyrics.render($el.text(), {
+      App.init($(this), $(".js-lyric-controls"));
+      return App.render({
         chords: false
-      }));
+      });
     });
   });
 
