@@ -1,7 +1,7 @@
 ---
 title: Aire navideño
 date: 2015-12-27 21:57 UTC
-tags:
+tags: navidad
 ---
 
 Hay un aire navideño ALELUYA

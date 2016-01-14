@@ -1,7 +1,7 @@
 ---
 title: Arre borriquito
 date: 2015-12-27 22:06 UTC
-tags:
+tags: navidad
 ---
 
 Arre borriquito, arre burro arre,
