@@ -1,7 +1,7 @@
 ---
 title: Gloria
 date: 2015-12-27 21:19 UTC
-tags:
+tags: gloria
 ---
 
 [Mim]Gloria, [Sol]gloria [Si7]a Dios en el c[Mim]ielo
