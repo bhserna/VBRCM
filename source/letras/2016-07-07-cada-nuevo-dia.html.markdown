@@ -14,12 +14,6 @@ así me lleno el corazón de ti
 y me levanto con una sonrisa al sol
 y empiezo a festejar el día de hoy.
 
-Soy como el ave que vuela libre
-me gusta el sol y contemplar la noche.
-
-Soy como el rio que corre fuerte
-vivo feliz puedo sentir la brisa del viento en mi piel.
-
 Siempre adelante no le doy ventaja al tiempo
 soy celoso de mi forma de pensar
 Vivo cada instante con un paso galopante 
