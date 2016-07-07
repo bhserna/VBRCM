@@ -18,7 +18,7 @@ a mi descienda el poder de Dios (bis)
 que nos creó (que nos creó)
 y nos salvó (y nos salvó).
 Vamos a orar sin cesar
-a nuestro gran Señor.
+a nuestro grande Dios.
  
 Y a confiar
 nuestro sustento viene de Dios (bis)
